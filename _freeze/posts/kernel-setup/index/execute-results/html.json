@@ -1,0 +1,12 @@
+{
+  "hash": "e184d9405c8450e435f138473aa06224",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"Fixing a Quarto kernel that points at a deleted conda env\"\ndescription: \"WinError 2, a dead kernelspec, and why quarto check said OK anyway.\"\ndate: 2026-08-18\ncategories: [tooling]\ndrafting: true\n---\n\nSome prose here.\n\n::: {#f7334122 .cell execution_count=1}\n``` {.python .cell-code}\nprint(\"hello from the blog kernel\")\n```\n\n::: {.cell-output .cell-output-stdout}\n```\nhello from the blog kernel\n```\n:::\n:::\n\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

@@ -1,8 +1,11 @@
-# options specified here will apply to all posts in this folder
+# Categories in use — copy from this list, never retype:
+#   deep-learning, time-series, retrieval, pytorch,
+#   backend, tooling, papers, notes
 
-# freeze computational output
-# (see https://quarto.org/docs/projects/code-execution.html#freeze)
-freeze: true
+freeze: auto
+jupyter: blog
 
-# Enable banner style title blocks
+author: "Ashwin Ruke"
+toc: true
+code-fold: show
 title-block-banner: true

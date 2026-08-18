@@ -1,0 +1,13 @@
+---
+title: "Fixing a Quarto kernel that points at a deleted conda env"
+description: "WinError 2, a dead kernelspec, and why quarto check said OK anyway."
+date: 2026-08-18
+categories: [tooling]
+drafting: true
+---
+
+Some prose here.
+
+```{python}
+print("hello from the blog kernel")
+```
