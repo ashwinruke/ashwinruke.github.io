@@ -1,0 +1,38 @@
+website:
+  title: "Ashwin Ruke"
+  site-url: https://ashwinruke.github.io
+  description: "Notes on machine learning, time-series, and building things that work."
+  back-to-top-navigation: true
+  draft-mode: unlinked
+  search: true
+
+  navbar:
+    left:
+      - href: index.qmd
+        text: Posts
+      - href: about.qmd
+        text: About
+    right:
+      - icon: github
+        href: https://github.com/ashwinruke
+        aria-label: GitHub
+      - icon: linkedin
+        href: https://linkedin.com/in/your-handle
+        aria-label: LinkedIn
+
+  page-footer:
+    left: "© 2026 Ashwin Ruke"
+    right: "Built with [Quarto](https://quarto.org)"
+
+  open-graph: true
+  twitter-card: true
+
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+    css: styles.css
+    toc: true
+    code-copy: true
+    code-overflow: wrap

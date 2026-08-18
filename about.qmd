@@ -1,19 +1,22 @@
 ---
 title: "About"
-image: profile.jpg
 about:
-  template: jolla
+  template: trestles
+  image: profile.jpg
   links:
-    - icon: bluesky
-      text: Bluesky
-      href: https://bsky.app/
+    - icon: github
+      text: GitHub
+      href: https://github.com/ashwinruke
     - icon: linkedin
       text: LinkedIn
-      href: https://linkedin.com
-    - icon: github
-      text: Github
-      href: https://github.com
-
+      href: https://linkedin.com/in/your-handle
+    - icon: envelope
+      text: Email
+      href: mailto:ashwinruke2002@gmail.com
 ---
 
-About this blog
+MTech Artificial Intelligence at MANIT Bhopal, working on deep learning for
+multivariate time-series. Currently an apprentice at Philips.
+
+This is where I write up things I've figured out — mostly models, retrieval,
+and the parts of backend work that touch ML systems.
