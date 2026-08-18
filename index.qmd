@@ -1,15 +1,27 @@
 ---
-title: "Ashwin Ruke"
+title: "Posts"
 listing:
+  id: post-list
   contents: posts
-  feed: true
-  sort: "date desc"
   type: default
-  categories: true
+  sort: "date desc"
+  categories: numbered
   sort-ui: false
-  filter-ui: false
+  filter-ui: [title, categories]
+  page-size: 20
+  feed:
+    type: partial
+    categories: [papers, notes]
+    items: 20
+  fields: [image, date, title, reading-time, categories, description]
+  image-height: "160px"
+  date-format: "D MMM YYYY"
 page-layout: full
-title-block-banner: true
+title-block-banner: false
 ---
 
+Notes on machine learning, mostly time-series and retrieval. Occasionally
+something breaks and I write down why.
 
+::: {#post-list}
+:::
