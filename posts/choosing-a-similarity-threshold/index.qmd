@@ -1,0 +1,64 @@
+---
+title: "How to choose a similarity threshold (instead of guessing 0.7)"
+description: "Picking τ by looking at where precision and recall cross, using real matches from a documentation-drift bot."
+date: 2026-08-18
+categories: [retrieval, tooling]
+image: threshold-curve.png
+draft: true
+---
+
+Every retrieval system has a number in it that decides whether two things
+count as "the same". Mine is 0.65. Here is how I got there, and why the
+number people usually reach for is worse.
+
+## The setup
+
+Given embeddings $u$ and $v$, cosine similarity is
+
+$$
+\text{sim}(u, v) = \frac{u \cdot v}{\|u\| \, \|v\|}
+$$
+
+and we accept a pair as a match when $\text{sim}(u,v) > \tau$. The whole
+question is what $\tau$ should be.
+
+## What the curve looks like
+
+```{python}
+#| label: fig-threshold
+#| fig-cap: "Precision and recall as the acceptance threshold moves."
+#| code-fold: true
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+rng = np.random.default_rng(0)
+matched = rng.normal(0.78, 0.10, 400).clip(0, 1)     # pairs that are genuinely the same
+unmatched = rng.normal(0.52, 0.12, 1600).clip(0, 1)  # pairs that are not
+
+taus = np.linspace(0.4, 0.9, 50)
+tp = (matched[None, :] > taus[:, None]).sum(1)
+fp = (unmatched[None, :] > taus[:, None]).sum(1)
+fn = len(matched) - tp
+
+precision = tp / np.maximum(tp + fp, 1)
+recall = tp / (tp + fn)
+
+fig, ax = plt.subplots(figsize=(7, 4))
+ax.plot(taus, precision, label="precision")
+ax.plot(taus, recall, label="recall")
+ax.set_xlabel(r"threshold $\tau$")
+ax.set_ylim(0, 1.02)
+ax.legend(frameon=False)
+ax.spines[["top", "right"]].set_visible(False)
+```
+
+@fig-threshold shows the crossover just below 0.65.
+
+## Why not 0.7
+
+...
+
+## What I'd do differently
+
+...

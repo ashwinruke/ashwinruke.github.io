@@ -1,0 +1,12 @@
+{
+  "hash": "1ea1206027f44d4d165a96379355806d",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"How to choose a similarity threshold (instead of guessing 0.7)\"\ndescription: \"Picking τ by looking at where precision and recall cross, using real matches from a documentation-drift bot.\"\ndate: 2026-08-18\ncategories: [retrieval, tooling]\nimage: threshold-curve.png\ndraft: true\n---\n\nEvery retrieval system has a number in it that decides whether two things\ncount as \"the same\". Mine is 0.65. Here is how I got there, and why the\nnumber people usually reach for is worse.\n\n## The setup\n\nGiven embeddings $u$ and $v$, cosine similarity is\n\n$$\n\\text{sim}(u, v) = \\frac{u \\cdot v}{\\|u\\| \\, \\|v\\|}\n$$\n\nand we accept a pair as a match when $\\text{sim}(u,v) > \\tau$. The whole\nquestion is what $\\tau$ should be.\n\n## What the curve looks like\n\n::: {#cell-fig-threshold .cell execution_count=1}\n``` {.python .cell-code code-fold=\"true\"}\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nrng = np.random.default_rng(0)\nmatched = rng.normal(0.78, 0.10, 400).clip(0, 1)     # pairs that are genuinely the same\nunmatched = rng.normal(0.52, 0.12, 1600).clip(0, 1)  # pairs that are not\n\ntaus = np.linspace(0.4, 0.9, 50)\ntp = (matched[None, :] > taus[:, None]).sum(1)\nfp = (unmatched[None, :] > taus[:, None]).sum(1)\nfn = len(matched) - tp\n\nprecision = tp / np.maximum(tp + fp, 1)\nrecall = tp / (tp + fn)\n\nfig, ax = plt.subplots(figsize=(7, 4))\nax.plot(taus, precision, label=\"precision\")\nax.plot(taus, recall, label=\"recall\")\nax.set_xlabel(r\"threshold $\\tau$\")\nax.set_ylim(0, 1.02)\nax.legend(frameon=False)\nax.spines[[\"top\", \"right\"]].set_visible(False)\n```\n\n::: {.cell-output .cell-output-display}\n![Precision and recall as the acceptance threshold moves.](index_files/figure-html/fig-threshold-output-1.png){#fig-threshold width=571 height=357}\n:::\n:::\n\n\n@fig-threshold shows the crossover just below 0.65.\n\n## Why not 0.7\n\n...\n\n## What I'd do differently\n\n...\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}
