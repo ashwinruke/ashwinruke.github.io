@@ -9,9 +9,9 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: Posts
-      - href: about.qmd
-        text: About
+        text: Home
+      - href: blog.qmd
+        text: Blogs
     right:
       - icon: rss
         href: index.xml

@@ -1,27 +1,54 @@
 ---
-title: "Posts"
+title: "Ashwin Ruke"
+subtitle: "AI/ML Engineer · MTech (AI), MANIT Bhopal"
+about:
+  template: trestles
+  image: profile.jpg
+  image-shape: rounded
+  links:
+    - icon: github
+      text: GitHub
+      href: https://github.com/ashwinruke
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/ashwinruke2002/
+    - icon: envelope
+      text: Email
+      href: mailto:ashwinruke2002@gmail.com
+    - icon: file-earmark-text
+      text: Résumé
+      href: resume.pdf
 listing:
-  id: post-list
-  contents: posts
-  type: default
-  sort: "date desc"
-  categories: numbered
-  sort-ui: false
-  filter-ui: [title, categories]
-  page-size: 20
-  feed:
-    type: partial
-    categories: [papers, notes]
-    items: 20
-  fields: [image, date, title, reading-time, categories, description]
-  image-height: "160px"
-  date-format: "D MMM YYYY"
-page-layout: full
-title-block-banner: false
+  - id: recent
+    contents: posts
+    type: default
+    max-items: 3
+    fields: [date, title, description]
+    sort: "date desc"
 ---
 
-Notes on machine learning, mostly time-series and retrieval. Occasionally
-something breaks and I write down why.
+I build machine learning systems and the backends that carry them. Currently
+finishing an MTech in Artificial Intelligence at MANIT Bhopal, where my thesis
+work is on deep learning architectures for multivariate time-series imputation,
+and working as an apprentice at Philips on retrieval-augmented compliance
+pipelines.
 
-::: {#post-list}
+## Selected work
+
+**DriftWatch** — an autonomous GitHub App that detects documentation drift in
+merged pull requests. FastAPI, tree-sitter AST diffing, Gemini embeddings over
+PostgreSQL with pgvector, deployed on Render.
+[Repository](https://github.com/ashwinruke/driftwatch)
+
+**GMRTI** — a masked recurrent-transformer architecture for imputing missing
+values in multivariate time series. MTech thesis work.
+
+**MedRAG** — retrieval-augmented regulatory compliance analysis for MedTech,
+built at Philips.
+
+## Recent writing
+
+::: {#recent}
 :::
+
+[All posts →](blog.qmd)
