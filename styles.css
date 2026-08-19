@@ -1,1 +1,32 @@
-/* css styles */
+/* Dark mode toggle — make it legible */
+.quarto-color-scheme-toggle {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid rgba(128, 128, 128, 0.4);
+  border-radius: 999px;
+  opacity: 1 !important;
+  transition: background-color 0.15s ease;
+}
+
+.quarto-color-scheme-toggle:hover {
+  background-color: rgba(128, 128, 128, 0.15);
+}
+
+/* Scale up the sun/moon glyph */
+.quarto-color-scheme-toggle .bi::before {
+  width: 1.1em;
+  height: 1.1em;
+}
+
+/* Add a word next to it */
+.quarto-color-scheme-toggle::after {
+  content: "Light";
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+body.quarto-dark .quarto-color-scheme-toggle::after {
+  content: "Dark";
+}
