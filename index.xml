@@ -10,7 +10,7 @@
 <atom:link href="https://ashwinruke.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>Notes on machine learning, time-series, and building things that work.</description>
 <generator>quarto-1.10.18</generator>
-<lastBuildDate>Mon, 17 Aug 2026 18:30:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 18 Aug 2026 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Fixing a Quarto kernel that points at a deleted conda env</title>
   <dc:creator>Ashwin Ruke</dc:creator>
@@ -18,7 +18,7 @@
   <description><![CDATA[ WinError 2, a dead kernelspec, and why quarto check said OK anyway. ]]></description>
   <category>tooling</category>
   <guid>https://ashwinruke.github.io/posts/kernel-setup/</guid>
-  <pubDate>Mon, 17 Aug 2026 18:30:00 GMT</pubDate>
+  <pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Post With Code</title>
@@ -29,7 +29,7 @@
   <category>code</category>
   <category>analysis</category>
   <guid>https://ashwinruke.github.io/posts/post-with-code/</guid>
-  <pubDate>Sun, 16 Aug 2026 18:30:00 GMT</pubDate>
+  <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
   <media:content url="https://ashwinruke.github.io/posts/post-with-code/image.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -39,7 +39,7 @@
   <description><![CDATA[ This is the first post in a Quarto blog. Welcome! ]]></description>
   <category>news</category>
   <guid>https://ashwinruke.github.io/posts/welcome/</guid>
-  <pubDate>Thu, 13 Aug 2026 18:30:00 GMT</pubDate>
+  <pubDate>Fri, 14 Aug 2026 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>

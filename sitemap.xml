@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ashwinruke.github.io/posts/welcome/index.html</loc>
-    <lastmod>2026-08-18T16:46:10.194Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ashwinruke.github.io/posts/kernel-setup/index.html</loc>
-    <lastmod>2026-08-18T16:46:10.192Z</lastmod>
-  </url>
-  <url>
     <loc>https://ashwinruke.github.io/index.html</loc>
-    <lastmod>2026-08-18T16:46:10.185Z</lastmod>
+    <lastmod>2026-08-19T05:15:41.940Z</lastmod>
   </url>
   <url>
-    <loc>https://ashwinruke.github.io/about.html</loc>
-    <lastmod>2026-08-18T16:46:10.185Z</lastmod>
+    <loc>https://ashwinruke.github.io/posts/welcome/index.html</loc>
+    <lastmod>2026-08-19T05:15:41.941Z</lastmod>
   </url>
   <url>
     <loc>https://ashwinruke.github.io/posts/post-with-code/index.html</loc>
-    <lastmod>2026-08-18T16:46:10.194Z</lastmod>
+    <lastmod>2026-08-19T05:15:41.941Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ashwinruke.github.io/posts/kernel-setup/index.html</loc>
+    <lastmod>2026-08-19T05:15:41.940Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ashwinruke.github.io/about.html</loc>
+    <lastmod>2026-08-19T05:15:41.940Z</lastmod>
   </url>
 </urlset>
