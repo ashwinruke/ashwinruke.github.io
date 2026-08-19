@@ -6,8 +6,8 @@
       version="2.0">
 <channel>
 <title>Ashwin Ruke</title>
-<link>https://ashwinruke.github.io/</link>
-<atom:link href="https://ashwinruke.github.io/index.xml" rel="self" type="application/rss+xml"/>
+<link>https://ashwinruke.github.io/blog.html</link>
+<atom:link href="https://ashwinruke.github.io/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Notes on machine learning, time-series, and building things that work.</description>
 <generator>quarto-1.10.18</generator>
 <lastBuildDate>Tue, 18 Aug 2026 00:00:00 GMT</lastBuildDate>

@@ -30,7 +30,3 @@
 body.quarto-dark .quarto-color-scheme-toggle::after {
   content: "Dark";
 }
-
-a[title="Toggle dark mode"] {
-  outline: 3px solid red !important;
-}

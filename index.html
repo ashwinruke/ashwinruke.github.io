@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Posts – Ashwin Ruke</title>
+<title>Ashwin Ruke</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -42,7 +42,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
@@ -82,20 +81,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-post-list .list');
+    const listingTargetEl = window.document.querySelector('#listing-recent .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-reading-time','listing-categories','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-post-list'] = new List('listing-post-list', options);
+    window['quarto-listings']['listing-recent'] = new List('listing-recent', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -140,14 +139,12 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="Ashwin Ruke" href="index.xml" data-external="1"><meta property="og:title" content="Posts – Ashwin Ruke">
-<meta property="og:description" content="Notes on machine learning, time-series, and building things that work.">
-<meta property="og:image" content="https://ashwinruke.github.io/posts/post-with-code/image.jpg">
+<meta property="og:title" content="Ashwin Ruke">
+<meta property="og:description" content="AI/ML Engineer · MTech (AI), MANIT Bhopal">
 <meta property="og:site_name" content="Ashwin Ruke">
-<meta name="twitter:title" content="Posts – Ashwin Ruke">
-<meta name="twitter:description" content="Notes on machine learning, time-series, and building things that work.">
-<meta name="twitter:image" content="https://ashwinruke.github.io/posts/post-with-code/image.jpg">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ashwin Ruke">
+<meta name="twitter:description" content="AI/ML Engineer · MTech (AI), MANIT Bhopal">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -331,11 +328,11 @@ window.Quarto = {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link active" href="./index.html" aria-current="page"> 
-<span class="menu-text">Posts</span></a>
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
-<span class="menu-text">About</span></a>
+    <a class="nav-link" href="./blog.html"> 
+<span class="menu-text">Blogs</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -363,59 +360,69 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="YW5hbHlzaXM=">analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y29kZQ==">code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bmV3cw==">news <span class="quarto-category-count">(2)</span></div><div class="category" data-category="dG9vbGluZw==">tooling <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+  <ul>
+  <li><a href="#selected-work" id="toc-selected-work" class="nav-link active" data-scroll-target="#selected-work">Selected work</a></li>
+  <li><a href="#recent-writing" id="toc-recent-writing" class="nav-link" data-scroll-target="#recent-writing">Recent writing</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
-
-
+<div class="quarto-about-trestles">
+  <div class="about-entity">
+    <img src="profile.jpg" class="about-image
+  rounded " style="width: 20em;">
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Posts</h1>
+<h1 class="title">Ashwin Ruke</h1>
+<p class="subtitle lead">AI/ML Engineer · MTech (AI), MANIT Bhopal</p>
 </div>
-
-
-
-<div class="quarto-title-meta column-page-left">
-
-    
-  
-    
+<div class="quarto-title-meta">
   </div>
-  
-
-
 </header>
-
-
-<p>Notes on machine learning, mostly time-series and retrieval. Occasionally something breaks and I write down why.</p>
-<div id="listing-post-list" class="quarto-listing quarto-listing-container-default">
-<div class="listing-actions-group">
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
+    <div class="about-links">
+  <a href="https://github.com/ashwinruke" class="about-link" rel="" target="">
+    <i class="bi bi-github"></i>
+     <span class="about-link-text">GitHub</span>
+  </a>
+  <a href="https://www.linkedin.com/in/ashwinruke2002/" class="about-link" rel="" target="">
+    <i class="bi bi-linkedin"></i>
+     <span class="about-link-text">LinkedIn</span>
+  </a>
+  <a href="mailto:ashwinruke2002@gmail.com" class="about-link" rel="" target="">
+    <i class="bi bi-envelope"></i>
+     <span class="about-link-text">Email</span>
+  </a>
+  <a href="/resume.pdf" class="about-link" rel="" target="">
+    <i class="bi bi-file-earmark-text"></i>
+     <span class="about-link-text">Résumé</span>
+  </a>
 </div>
+  </div>
+  <div class="about-contents"><main class="content" id="quarto-document-content">
+
+
+<p>I build machine learning systems and the backends that carry them. Currently finishing an MTech in Artificial Intelligence at MANIT Bhopal, where my thesis work is on deep learning architectures for multivariate time-series imputation, and working as an apprentice at Philips on retrieval-augmented compliance pipelines.</p>
+<section id="selected-work" class="level2">
+<h2 data-anchor-id="selected-work">Selected work</h2>
+<p><strong>DriftWatch</strong> — an autonomous GitHub App that detects documentation drift in merged pull requests. FastAPI, tree-sitter AST diffing, Gemini embeddings over PostgreSQL with pgvector, deployed on Render. <a href="https://github.com/ashwinruke/driftwatch">Repository</a></p>
+<p><strong>GMRTI</strong> — a masked recurrent-transformer architecture for imputing missing values in multivariate time series. MTech thesis work.</p>
+<p><strong>MedRAG</strong> — retrieval-augmented regulatory compliance analysis for MedTech, built at Philips.</p>
+</section>
+<section id="recent-writing" class="level2">
+<h2 data-anchor-id="recent-writing">Recent writing</h2>
+<div id="listing-recent" class="quarto-listing quarto-listing-container-default">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="dG9vbGluZw==" data-listing-date-sort="1787011200000" data-listing-file-modified-sort="1787118194998" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
-<div class="thumbnail"><a href="./posts/kernel-setup/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" style="height: 160px;">&nbsp;</div>
-
-</a></div>
+<div class="quarto-post image-right" data-index="0" data-categories="dG9vbGluZw==" data-listing-date-sort="1787011200000" data-listing-file-modified-sort="1787121101686" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/kernel-setup/index.html" class="no-external">Fixing a Quarto kernel that points at a deleted conda env</a>
 </h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('dG9vbGluZw=='); return false;">tooling</div>
-
-</div>
 <div class="delink listing-description"><a href="./posts/kernel-setup/index.html" class="no-external">
 <p>WinError 2, a dead kernelspec, and why quarto check said OK anyway.</p>
 </a></div>
@@ -423,31 +430,16 @@ window.Quarto = {
 <div class="metadata">
 <a href="./posts/kernel-setup/index.html" class="no-external">
 <div class="listing-date">
-18 Aug 2026
+Aug 18, 2026
 </div>
-<div class="listing-reading-time">1 min</div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="bmV3cyUyQ2NvZGUlMkNhbmFseXNpcw==" data-listing-date-sort="1786924800000" data-listing-file-modified-sort="1787118194999" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
-<div class="thumbnail"><a href="./posts/post-with-code/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/post-with-code/image.jpg" class="thumbnail-image" style="height: 160px;">
-
-</a></div>
+<div class="quarto-post image-right" data-index="1" data-categories="bmV3cyUyQ2NvZGUlMkNhbmFseXNpcw==" data-listing-date-sort="1786924800000" data-listing-file-modified-sort="1787121101686" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/post-with-code/index.html" class="no-external">Post With Code</a>
 </h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">news</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y29kZQ=='); return false;">code</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YW5hbHlzaXM='); return false;">analysis</div>
-
-</div>
 <div class="delink listing-description"><a href="./posts/post-with-code/index.html" class="no-external">
 This is a post with executable code.
 </a></div>
@@ -455,27 +447,16 @@ This is a post with executable code.
 <div class="metadata">
 <a href="./posts/post-with-code/index.html" class="no-external">
 <div class="listing-date">
-17 Aug 2026
+Aug 17, 2026
 </div>
-<div class="listing-reading-time">1 min</div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="bmV3cw==" data-listing-date-sort="1786665600000" data-listing-file-modified-sort="1787118194999" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="32">
-<div class="thumbnail"><a href="./posts/welcome/index.html" class="no-external">
-
-<p class="card-img-top"><img loading='lazy' src="posts/welcome/thumbnail.jpg" style="height: 160px;"  class="thumbnail-image card-img"/></p>
-
-</a></div>
+<div class="quarto-post image-right" data-index="2" data-categories="bmV3cw==" data-listing-date-sort="1786665600000" data-listing-file-modified-sort="1787121101686" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="32">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/welcome/index.html" class="no-external">Welcome To My Blog</a>
 </h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">news</div>
-
-</div>
 <div class="delink listing-description"><a href="./posts/welcome/index.html" class="no-external">
 This is the first post in a Quarto blog. Welcome!
 </a></div>
@@ -483,20 +464,21 @@ This is the first post in a Quarto blog. Welcome!
 <div class="metadata">
 <a href="./posts/welcome/index.html" class="no-external">
 <div class="listing-date">
-14 Aug 2026
+Aug 14, 2026
 </div>
-<div class="listing-reading-time">1 min</div>
 </a>
 </div>
 </div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
+<p><a href="./blog.html">All posts →</a></p>
 
 
-
-
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+</section>
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main></div>
+</div>
+ <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -512,13 +494,6 @@ This is the first post in a Quarto blog. Welcome!
       window.document.body.appendChild(a);
     }
     setColorSchemeToggle(hasAlternateSentinel())
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
